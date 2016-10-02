@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<!--
+  Copyright (c) 2016
+  Single page web based app
+-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Spring Rolls</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="./css/main.css" media="screen"  charset="utf-8">
+    <link href="./font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="./img/logo.jpeg" style="height:40px" alt="" /></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Recipes <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Creativity</a></li>
+            <li><a href="#">Favorite</a></li>
+            <!-- <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li> -->
+          </ul>
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search Recipy or Creativity ...">
+            </div>
+            <button type="submit" class="btn btn-default">Search</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Login</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog" aria-hidden="true"></i> <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Account</a></li>
+                <li><a href="#">My Recipes</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-2" id="left-menu">
+          <div class="panel panel-cust">
+            <div class="panel-heading">
+              <i class="pannel-title">View By Type</i>
+            </div>
+            <div class="panel-body">
+              <ul class="type-view">
+                <li>Recipy</li>
+                <li>Creativity</li>
+                <li>Favorite</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="panel panel-cust">
+            <div class="panel-heading">
+              <i class="pannel-title">Tags</i>
+            </div>
+            <div class="panel-body views" id="top-tags">
+              <a href="#"><span class="label label-default">Chinese</span></a>
+              <a href="#"><span class="label label-primary">Fresh</span></a>
+              <a href="#"><span class="label label-success">Indian</span></a>
+              <a href="#"><span class="label label-info">Fruit</span></a>
+              <a href="#"><span class="label label-warning">Vegetarian</span></a>
+              <a href="#"><span class="label label-danger">Specipy</span></a>
+            </div>
+          </div>
+        </div>
+        <!-- Notes Display and new notes-->
+        <div class="col-xs-10 gallery">
+          <!-- <ol class="breadcrumb alert alert-warning" >
+            <li><h4>Recipes and Creativities</h4></li>
+          </ol> -->
+
+          <div id="gallery">
+            <!-- Images display here -->
+            <div class="panel panel-default panel-pic">
+              <div class="panel-heading">
+                <i class="pannel-title">Cooking Chinese Food... Have a TRY!!! <label class="label label-danger">Creativity</label></i>
+                <i class="pull-right">06:00pm, Oct 10, 2016 at Fortun Box Chinese Restaurant</i>
+                <div class="clearfix"></div>
+              </div>
+              <div class="panel-body">
+                <div class="col-xs-4 nail-padding">
+                  <a href="#" class="thumbnail">
+                    <img src="./img/test1.jpg" alt="...">
+                  </a>
+                </div>
+                <div class="col-xs-4 nail-padding">
+                  <a href="#" class="thumbnail">
+                    <img src="./img/test2.jpg" alt="...">
+                  </a>
+                </div>
+                <div class="col-xs-4 nail-padding">
+                  <a href="#" class="thumbnail">
+                    <img src="./img/test3.jpg" alt="...">
+                  </a>
+                </div>
+              </div>
+              <div class="panel-footer">
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostru... <a href="#">Read More</a></p>
+             </div>
+            </div>
+
+            <div class="panel panel-default panel-pic">
+              <div class="panel-heading">
+                <i class="pannel-title">Cooking Chinese Food... Have a TRY!!! <label class="label label-danger">Recipy</label></i>
+                <i class="pull-right">06:00pm, Oct 10, 2016 at Fortun Box Chinese Restaurant</i>
+                <div class="clearfix"></div>
+              </div>
+              <div class="panel-body">
+                <div class="col-xs-4 nail-padding">
+                  <a href="#" class="thumbnail">
+                    <img src="./img/test4.jpg" alt="...">
+                  </a>
+                </div>
+                <div class="col-xs-4 nail-padding">
+                  <a href="#" class="thumbnail">
+                    <img src="./img/test2.jpg" alt="...">
+                  </a>
+                </div>
+                <div class="col-xs-4 nail-padding">
+                  <a href="#" class="thumbnail">
+                    <img src="./img/test3.jpg" alt="...">
+                  </a>
+                </div>
+
+              </div>
+              <div class="panel-footer">
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostru... <a href="#">Read More</a></p>
+             </div>
+            </div>
+
+            <div class="panel panel-default panel-pic">
+              <div class="panel-heading">
+                <i class="pannel-title">Cooking Chinese Food... Have a TRY!!! <label class="label label-danger">Creativity</label></i>
+                <i class="pull-right">06:00pm, Oct 10, 2016 at Fortun Box Chinese Restaurant</i>
+                <div class="clearfix"></div>
+              </div>
+              <div class="panel-body">
+                <div class="col-xs-4 nail-padding">
+                  <a href="#" class="thumbnail">
+                    <img src="./img/test3.jpg" alt="...">
+                  </a>
+                </div>
+                <div class="col-xs-4 nail-padding">
+                  <a href="#" class="thumbnail">
+                    <img src="./img/test2.jpg" alt="...">
+                  </a>
+                </div>
+                <div class="col-xs-4 nail-padding">
+                  <a href="#" class="thumbnail">
+                    <img src="./img/test1.jpg" alt="...">
+                  </a>
+                </div>
+
+              </div>
+              <div class="panel-footer">
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostru... <a href="#">Read More</a></p>
+             </div>
+            </div>
+
+
+          </div>
+        </div>
+
+      </div> <!-- End of Row -->
+
+    </div> <!-- End of Container -->
+    <div class="container footer">
+      <div class="row">
+        <div class="col-xs-10">
+            Powered By: Bootstrap, JQuery, JavaScript, PHP
+        </div>
+        <div class="col-xs-2">
+          Author
+        </div>
+      </div>
+    </div>
+
+
+    <!-- New Pictures Popup -->
+    <div class="modal fade" id="addPicPop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <form id="addPic" enctype="multipart/form-data" action="/images" method="post">
+
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">New Pictures</h4>
+            </div>
+            <div class="modal-body" id="upload-view">
+              <div id="error-info">
+              </div>
+              <div>
+                <input type="file" id="pic-path" name="file[]" multiple="" value="" onchange="checkPic(this, 'error-info')">
+              </div>
+              <div class="" style="padding-top:10px">
+                <label for="username" class="col-xs-3">Your Name:</label>
+                <input type="text" name="username" id="username" value="" class="col-xs-3" placeholder="Random name will be applied if leave it empty">
+                <label for="tag" class="col-xs-2">Tag:</label>
+                <input type="text" name="tag" id="tag" value="" class="col-xs-3" placeholder="Tag">
+              </div>
+            </div>
+            <div class="modal-footer">
+
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Cancle</button>
+              <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div><!-- End New Pic Popup -->
+
+    <!-- Single Pic View Popup -->
+    <div class="modal fade" id="singlePicPop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Single Picture View</h4>
+          </div>
+          <div class="modal-body">
+            <div class="filter">
+              <button type="button" class="btn btn-warning" id="greyscale" name="button">Greyscale</button>
+              <button type="button" class="btn btn-info" id="sepia" name="button">Sepia</button>
+              <button type="button" class="btn btn-danger" id="invert" name="button">Invert</button>
+              <button type="button" class="btn btn-default" id="default" name="button">Orginal</button>
+            </div>
+            <div id="singleView">
+            <!-- Single  Picture Display Here -->
+            </div>
+            <div id="comments">
+              <!-- Comments Display Here -->
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <!-- Append New Notes Form -->
+
+            <div class="panel panel-info">
+              <div class="panel-heading">
+                <h4 class="panel-title" id="appendNotes">Add Comment</h4>
+              </div>
+              <div class="panel-body">
+                <div class="appendNotes form-horizontal">
+                  <textarea name="note" rows="2" class="form-control col-xs-12" id="newNote" placeholder="Add Comment Here ..."></textarea>
+                </div>
+                <div class="" style="padding-top:70px">
+                  <div id="info" style="text-align:left; color:red" >
+
+                  </div>
+                  <label for="username-comment" class="col-xs-3">Your Name:</label>
+                  <input type="text" name="username-comment" class="col-xs-5" id="username-comment" placeholder="Please Input Your Name, or else a random name will be given by default.">
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Cancle</button>
+              <button type="button" class="btn btn-primary" onclick="newComment()">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!--  Single Pic View Popup -->
+
+
+  </body>
+  <script src="./js/jquery.min.js" charset="utf-8"></script>
+  <script src="./js/bootstrap.min.js" charset="utf-8"></script>
+  <script src="./js/ajax-custom.js" charset="utf-8"></script>
+  <script type="text/javascript">
+  //Auto execute Function: Loading and appending all elements on UI
+  $(document).ready(function(){
+    // loadImages();
+    // loadNames();
+    // loadTags();
+    // loadTopNames();
+    // loadTopTags();
+    // $("#tag-view").hide();
+    // $("#name-view").hide();
+    // viewListener();
+  });
+
+
+// // Filters
+// $(document).ready(function(){
+//   $("#invert").on('click', function () {
+//     $("#singleView").find("img").removeClass();
+//     $("#singleView").find("img").addClass("invert");
+//   });
+//   $("#sepia").on('click', function () {
+//     $("#singleView").find("img").removeClass();
+//     $("#singleView").find("img").addClass("sepia");
+//   });
+//   $("#greyscale").on('click', function () {
+//     $("#singleView").find("img").removeClass();
+//     $("#singleView").find("img").addClass("greyscale");
+//   });
+//   $("#default").on('click', function () {
+//     $("#singleView").find("img").removeClass();
+//   });
+// });
+
+// Load recent 10 images order by uploaded time
+$(document).ready(function(){
+  // console.log($("#gallery"));
+  $("#recently").on('click', function() {
+    restGet(HOST+"/recently", GET_METHOD, function(data){
+      $("#gallery").empty();
+      $.each(data, function(index,row) {
+        // console.log(row);
+        var tag = (row.tag).replace(' ', '-')
+        var username = (row.username).replace(' ', '-')
+        var newImage = $('<div class="col-xs-4 '+tag +' '+username+'" data-iid='+row.id+'>'+
+        '<div class="thumbnail gallery-single">'+
+        '<img src="./pics/'+row.id+'/'+row.name+'" alt="...">'+
+        '<div class="caption">'+
+        '<h5>'+row.username+'</h5>'+
+        '<p><span class="label label-'+getColor(row.tag)+'">'+row.tag+'</span>  </p>'+
+        '</div></div>'+
+        '</div>');
+        // $("#tag-view").show();
+        $("#gallery").append(newImage);
+        $(newImage).on('click', function() {
+          // console.log($(this).parent());
+          var tag = $(this).find(".label").html();
+          var username = $(this).find("h5").html();
+          var iid = $(this).data("iid");
+          var name = $(this).find("img").attr("src");
+          $("#singleView").text('<div class="col-xs-12 '+tag.replace(' ','-') +' '+username.replace(' ','-')+'" data-iid='+iid+'>'+
+          '<div class="thumbnail gallery-single">'+
+          '<img src="'+name+'" alt="...">'+
+          '<div class="caption">'+
+          '<h5>'+username+'</h5>'+
+          '<p><span class="label label-'+getColor(tag)+'">'+tag+'</span>  </p>'+
+          '<p>'+row.dd+'</span>  </p>'+
+          '</div></div>'+
+          '</div>');
+          $("#singlePicPop").modal("show");
+        });
+
+      });
+    }, '#error');
+  });
+});
+
+
+
+// UI Actions
+function viewListener() {
+
+  $("#tag-view-button").on('click', function() {
+    $("#tag-view").show();
+    $("#tag-view-button").find(".badge").first().text("-");
+    $("#name-view").hide();
+    $("#name-view-button").find(".badge").first().text("+");
+  });
+  $("#name-view-button").on('click', function() {
+    $("#tag-view").hide();
+    $("#tag-view-button").find(".badge").first().text("+");
+    $("#name-view").show();
+    $("#name-view-button").find(".badge").first().text("-");
+  });
+
+// console.log($(".views"));
+  $(".views").find("li").on('click', function(){
+    var eleVar = $(this).find("cu").html();
+    eleVar = eleVar.replace(' ', '-');
+    var displayEles = $("#gallery").find("."+eleVar);
+    // console.log(displayEles);
+    $("#gallery").find(".col-xs-4").hide();
+    $(displayEles).show();
+  });
+
+}
+
+// Load all images
+function loadImages(){
+  $("#gallery").empty();
+  restGet(HOST+"/images", GET_METHOD, function(data){
+    $.each(data, function(index,row) {
+      // console.log(row);
+      var tag = (row.tag).replace(' ', '-')
+      var username = (row.username).replace(' ', '-')
+      var newImage = $('<div class="col-xs-4 '+tag +' '+username+'" data-iid='+row.id+'>'+
+      '<div class="thumbnail gallery-single">'+
+      '<img src="./pics/'+row.id+'/'+row.name+'" alt="...">'+
+      '<div class="caption">'+
+      '<h5>'+row.username+'</h5>'+
+      '<p><span class="label label-'+getColor(row.tag)+'">'+row.tag+'</span>  </p>'+
+      '<p>'+row.dd+'</span>  </p>'+
+      '</div></div>'+
+      '</div>');
+      // $("#tag-view").show();
+      $("#gallery").append(newImage);
+      $(newImage).on('click', function() {
+        // console.log($(this).parent());
+        var tag = $(this).find(".label").html();
+        var username = $(this).find("h5").html();
+        var iid = $(this).data("iid");
+        var name = $(this).find("img").attr("src");
+        $("#singleView").empty().append('<div class="col-xs-12 '+tag.replace(' ','-') +' '+username.replace(' ','-')+'" data-iid='+iid+'>'+
+        '<div class="thumbnail gallery-single">'+
+        '<img src="'+name+'" alt="...">'+
+        '<div class="caption">'+
+        '<h5>'+username+'</h5>'+
+        '<p><span class="label label-'+getColor(tag)+'">'+tag+'</span>  </p>'+
+        '</div></div>'+
+        '</div>');
+        restGet(HOST+"/comments/"+iid, GET_METHOD, function(data){
+          $("#comments").empty();
+          $.each(data, function(index, row){
+            appendNote(row);
+          });
+        }, "#error");
+        $("#singlePicPop").modal("show");
+      });
+
+    });
+  }, '#error');
+}
+
+// return Tag color by tag length
+function getColor(tag){
+  len = tag.length;
+  if(len>6){
+    len = len%6
+  }
+  var color = ["primary", "default", "success", "info", "warning", "danger"];
+  return color[len-1];
+}
+
+// Load all users
+function loadNames() {
+  restGet(HOST+"/users", GET_METHOD, function(data){
+    $.each(data, function(index,row) {
+      // console.log($("#name-view"));
+      // console.log(row.username);
+      $("#name-view").append('<li class="list-item"><cu>'+row.username+'</cu> <span class="badge">'+row.count+'</span></li>');
+      // $("#tag-view").show();
+      viewListener();
+    });
+  }, '#error');
+}
+// Load All tags
+function loadTags() {
+  restGet(HOST+"/tags", GET_METHOD, function(data){
+    $.each(data, function(index,row) {
+      // console.log($("#tag-view"));
+      // console.log(row.tag);
+      $("#tag-view").append('<li class="list-item"><cu>'+row.tag+'</cu> <span class="badge">'+row.count+'</span></li>');
+      // $("#tag-view").show();
+      viewListener();
+    });
+  }, '#error');
+}
+
+// Load top 10 users who upload the most
+function loadTopNames() {
+  restGet(HOST+"/topusers", GET_METHOD, function(data){
+    // console.log(data);
+    $.each(data, function(index,row) {
+      // console.log($("#tag-view"));
+      // console.log(row.tag);
+      // console.log($("#top-users"));
+      // console.log(row.username);
+      $("#top-users").append('<li class="list-item"><cu>'+row.username+'</cu> <span class="badge">'+row.count+'</span></li>');
+
+      // $("#tag-view").show();
+      viewListener();
+    });
+  }, '#error');
+}
+
+// Load top 10 tags which used most frequently
+function loadTopTags() {
+  restGet(HOST+"/toptags", GET_METHOD, function(data){
+    $.each(data, function(index,row) {
+      // console.log($("#tag-view"));
+      // console.log(row.tag);
+      $("#top-tags").append('<li class="list-item"><cu>'+row.tag+'</cu> <span class="badge">'+row.count+'</span></li>');
+      // $("#tag-view").show();
+      viewListener();
+    });
+  }, '#error');
+}
+
+
+  //UI Function: Add new note
+  function newComment(){
+    var note = {};
+    $("#info").empty();
+    note.username = $("#username-comment").val();
+    if(note.username.length<1){
+      $("#info").empty().append("<li>Your name can not be empty</li>");
+      return false;
+    }
+    note.content = $("#newNote").val();
+    note.iid = $("#singleView").find(".col-xs-12").data("iid");
+    restSet(HOST+"/comments", POST_METHOD, note, function(){
+      console.log("Comments Success");
+      cleanComment();
+      $("#singlePicPop").modal("hide");
+    },'#error');
+
+  }
+  //Empty comments input
+  function cleanComment() {
+    $("#username-comment").val("");
+    $("#tag-comment").val("");
+    $("#newNote").val("");
+  }
+
+  //UI Function: Append note to UI
+  function appendNote(note) {
+    $("#comments").append(
+      '<div class="note">'+
+      '<div class="note-title">'+
+      '<i>Comment By: '+note.username+'</i>'+
+      '</div>'+
+      '<div class="note-content">'+ note.comments +
+      '</div></div>');
+  }
+
+  </script>
+
+</html>
