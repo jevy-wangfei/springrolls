@@ -22,27 +22,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><img src="./img/logo.jpeg" style="height:40px" alt="" /></a>
+          <a class="navbar-brand" href="index.html"><img src="./img/logo.png" style="height:35px" alt="" /></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Recipes <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Creativity</a></li>
+            <li class="active"><a href="index.html">Recipes &#38; Restaurant<span class="sr-only">(current)</span></a></li>
+            <li><a href="creativity.html">Creativity &#38; Fastival</a></li>
             <li><a href="#">Favorite</a></li>
-            <!-- <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li> -->
           </ul>
           <form class="navbar-form navbar-left">
             <div class="form-group">
@@ -68,7 +56,48 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-xs-2" id="left-menu">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img src="./img/index1.jpeg" style="width:100%" alt="...">
+            <div class="carousel-caption">
+              ...
+            </div>
+          </div>
+          <div class="item">
+            <img src="./img/index2.jpeg" style="width:100%" alt="...">
+            <div class="carousel-caption">
+              ...
+            </div>
+          </div>
+          <div class="item">
+            <img src="./img/index3.jpeg" style="width:100%" alt="...">
+            <div class="carousel-caption">
+              ...
+            </div>
+          </div>
+
+          </div>
+
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+          </a>
+        </div>
+        <!-- <div class="col-xs-2" id="left-menu">
           <div class="panel panel-cust">
             <div class="panel-heading">
               <i class="pannel-title">View By Type</i>
@@ -95,206 +124,132 @@
               <a href="#"><span class="label label-danger">Specipy</span></a>
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- Notes Display and new notes-->
-        <div class="col-xs-10 gallery">
+
+
+        <div class="col-xs-12 gallery">
           <!-- <ol class="breadcrumb alert alert-warning" >
             <li><h4>Recipes and Creativities</h4></li>
           </ol> -->
 
           <div id="gallery">
             <!-- Images display here -->
-            <div class="panel panel-default panel-pic">
+            <div class="panel panel-default panel-cust">
               <div class="panel-heading">
-                <i class="pannel-title">Cooking Chinese Food... Have a TRY!!! <label class="label label-danger">Creativity</label></i>
+                <i class="pannel-title">Cooking Chinese Food... Have a TRY!!! <label class="label label-primary">Creativity</label></i>
                 <i class="pull-right">06:00pm, Oct 10, 2016 at Fortun Box Chinese Restaurant</i>
                 <div class="clearfix"></div>
               </div>
               <div class="panel-body">
-                <div class="col-xs-4 nail-padding">
-                  <a href="#" class="thumbnail">
-                    <img src="./img/test1.jpg" alt="...">
+                <div class="col-xs-6 cust-shumbnail">
+                  <a href="./creativity.html" class="thumbnail">
+                    <div class="media">
+                      <div class="media-left col-xs-6">
+                        <img class="media-object col-xs-12" src="./img/test1.jpg" alt="...">
+                      </div>
+                      <div class="media-body col-xs-6">
+                        <h4 class="media-heading">Creativity Title</h4>
+                        <p>
+                          This event will be hold at XXX, open time 6:00pm Oct 10, 2016, and colse at 9:00pm Oct 10.
+                        </p>
+                        <p>
+                            <i>06/06/2016</i>
+                        </p>
+                      </div>
+                    </div>
                   </a>
                 </div>
-                <div class="col-xs-4 nail-padding">
+                <div class="col-xs-6 cust-shumbnail">
                   <a href="#" class="thumbnail">
-                    <img src="./img/test2.jpg" alt="...">
-                  </a>
-                </div>
-                <div class="col-xs-4 nail-padding">
-                  <a href="#" class="thumbnail">
-                    <img src="./img/test3.jpg" alt="...">
+                    <div class="media">
+                      <div class="media-left col-xs-6">
+                        <img class="media-object col-xs-12" src="./img/test1.jpg" alt="...">
+                      </div>
+                      <div class="media-body col-xs-6">
+                        <h4 class="media-heading">Creativity Title</h4>
+                        <p>
+                          This event will be hold at XXX, open time 6:00pm Oct 10, 2016, and colse at 9:00pm Oct 10.
+                        </p>
+                        <p>
+                            <i>06/06/2016</i>
+                        </p>
+                      </div>
+                    </div>
                   </a>
                 </div>
               </div>
-              <div class="panel-footer">
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostru... <a href="#">Read More</a></p>
-             </div>
             </div>
 
-            <div class="panel panel-default panel-pic">
+
+            <div class="panel panel-default panel-cust ">
               <div class="panel-heading">
-                <i class="pannel-title">Cooking Chinese Food... Have a TRY!!! <label class="label label-danger">Recipy</label></i>
+                <i class="pannel-title">Jevy's new Recipy <label class="label label-default">Recipy</label></i>
                 <i class="pull-right">06:00pm, Oct 10, 2016 at Fortun Box Chinese Restaurant</i>
                 <div class="clearfix"></div>
               </div>
               <div class="panel-body">
-                <div class="col-xs-4 nail-padding">
+                <div class="col-xs-6 cust-shumbnail">
                   <a href="#" class="thumbnail">
-                    <img src="./img/test4.jpg" alt="...">
+                    <div class="media">
+                      <div class="media-left col-xs-6">
+                        <img class="media-object col-xs-12" src="./img/test1.jpg" alt="...">
+                      </div>
+                      <div class="media-body col-xs-6">
+                        <h4 class="media-heading">Creativity Title</h4>
+                        <p>
+                          This event will be hold at XXX, open time 6:00pm Oct 10, 2016, and colse at 9:00pm Oct 10.
+                        </p>
+                        <p>
+                            <i>06/06/2016</i>
+                        </p>
+                      </div>
+                    </div>
                   </a>
                 </div>
-                <div class="col-xs-4 nail-padding">
+                <div class="col-xs-6 cust-shumbnail">
                   <a href="#" class="thumbnail">
-                    <img src="./img/test2.jpg" alt="...">
+                    <div class="media">
+                      <div class="media-left col-xs-6">
+                        <img class="media-object col-xs-12" src="./img/test1.jpg" alt="...">
+                      </div>
+                      <div class="media-body col-xs-6">
+                        <h4 class="media-heading">Creativity Title</h4>
+                        <p>
+                          This event will be hold at XXX, open time 6:00pm Oct 10, 2016, and colse at 9:00pm Oct 10.
+                        </p>
+                        <p>
+                            <i>06/06/2016</i>
+                        </p>
+                      </div>
+                    </div>
                   </a>
                 </div>
-                <div class="col-xs-4 nail-padding">
-                  <a href="#" class="thumbnail">
-                    <img src="./img/test3.jpg" alt="...">
-                  </a>
-                </div>
-
               </div>
-              <div class="panel-footer">
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostru... <a href="#">Read More</a></p>
-             </div>
             </div>
-
-            <div class="panel panel-default panel-pic">
-              <div class="panel-heading">
-                <i class="pannel-title">Cooking Chinese Food... Have a TRY!!! <label class="label label-danger">Creativity</label></i>
-                <i class="pull-right">06:00pm, Oct 10, 2016 at Fortun Box Chinese Restaurant</i>
-                <div class="clearfix"></div>
-              </div>
-              <div class="panel-body">
-                <div class="col-xs-4 nail-padding">
-                  <a href="#" class="thumbnail">
-                    <img src="./img/test3.jpg" alt="...">
-                  </a>
-                </div>
-                <div class="col-xs-4 nail-padding">
-                  <a href="#" class="thumbnail">
-                    <img src="./img/test2.jpg" alt="...">
-                  </a>
-                </div>
-                <div class="col-xs-4 nail-padding">
-                  <a href="#" class="thumbnail">
-                    <img src="./img/test1.jpg" alt="...">
-                  </a>
-                </div>
-
-              </div>
-              <div class="panel-footer">
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostru... <a href="#">Read More</a></p>
-             </div>
-            </div>
-
 
           </div>
         </div>
 
+        <div class="footer col-xs-12">
+          <div class="col-xs-10">
+              Powered By: Bootstrap, JQuery, JavaScript, PHP
+          </div>
+          <div class="col-xs-2">
+            Author
+          </div>
+        </div>
       </div> <!-- End of Row -->
-
     </div> <!-- End of Container -->
-    <div class="container footer">
-      <div class="row">
-        <div class="col-xs-10">
-            Powered By: Bootstrap, JQuery, JavaScript, PHP
-        </div>
-        <div class="col-xs-2">
-          Author
-        </div>
-      </div>
+    <div class="media-button">
+      <ul class="list-inline">
+        <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+        <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
     </div>
-
-
-    <!-- New Pictures Popup -->
-    <div class="modal fade" id="addPicPop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <form id="addPic" enctype="multipart/form-data" action="/images" method="post">
-
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myModalLabel">New Pictures</h4>
-            </div>
-            <div class="modal-body" id="upload-view">
-              <div id="error-info">
-              </div>
-              <div>
-                <input type="file" id="pic-path" name="file[]" multiple="" value="" onchange="checkPic(this, 'error-info')">
-              </div>
-              <div class="" style="padding-top:10px">
-                <label for="username" class="col-xs-3">Your Name:</label>
-                <input type="text" name="username" id="username" value="" class="col-xs-3" placeholder="Random name will be applied if leave it empty">
-                <label for="tag" class="col-xs-2">Tag:</label>
-                <input type="text" name="tag" id="tag" value="" class="col-xs-3" placeholder="Tag">
-              </div>
-            </div>
-            <div class="modal-footer">
-
-              <button type="button" class="btn btn-danger" data-dismiss="modal">Cancle</button>
-              <button type="submit" class="btn btn-primary">Save</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div><!-- End New Pic Popup -->
-
-    <!-- Single Pic View Popup -->
-    <div class="modal fade" id="singlePicPop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Single Picture View</h4>
-          </div>
-          <div class="modal-body">
-            <div class="filter">
-              <button type="button" class="btn btn-warning" id="greyscale" name="button">Greyscale</button>
-              <button type="button" class="btn btn-info" id="sepia" name="button">Sepia</button>
-              <button type="button" class="btn btn-danger" id="invert" name="button">Invert</button>
-              <button type="button" class="btn btn-default" id="default" name="button">Orginal</button>
-            </div>
-            <div id="singleView">
-            <!-- Single  Picture Display Here -->
-            </div>
-            <div id="comments">
-              <!-- Comments Display Here -->
-            </div>
-          </div>
-
-          <div class="modal-footer">
-            <!-- Append New Notes Form -->
-
-            <div class="panel panel-info">
-              <div class="panel-heading">
-                <h4 class="panel-title" id="appendNotes">Add Comment</h4>
-              </div>
-              <div class="panel-body">
-                <div class="appendNotes form-horizontal">
-                  <textarea name="note" rows="2" class="form-control col-xs-12" id="newNote" placeholder="Add Comment Here ..."></textarea>
-                </div>
-                <div class="" style="padding-top:70px">
-                  <div id="info" style="text-align:left; color:red" >
-
-                  </div>
-                  <label for="username-comment" class="col-xs-3">Your Name:</label>
-                  <input type="text" name="username-comment" class="col-xs-5" id="username-comment" placeholder="Please Input Your Name, or else a random name will be given by default.">
-                </div>
-              </div>
-            </div>
-            <div class="">
-              <button type="button" class="btn btn-danger" data-dismiss="modal">Cancle</button>
-              <button type="button" class="btn btn-primary" onclick="newComment()">Save</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div><!--  Single Pic View Popup -->
-
-
   </body>
   <script src="./js/jquery.min.js" charset="utf-8"></script>
   <script src="./js/bootstrap.min.js" charset="utf-8"></script>
